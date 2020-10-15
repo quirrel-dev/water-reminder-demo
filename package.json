@@ -8,7 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@quirrel/next": "^0.6.1",
     "next": "9.5.5",
+    "nodemailer": "^6.4.14",
     "react": "16.14.0",
     "react-dom": "16.14.0"
   }

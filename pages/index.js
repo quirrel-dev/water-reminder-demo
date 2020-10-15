@@ -10,11 +10,12 @@ export default function Home() {
       </p>
 
       <form
-        onSubmit={(evt) => {
+        onSubmit={async (evt) => {
           evt.preventDefault();
           const formData = new FormData(evt.target);
           const email = formData.get("email");
-          fetch("/api/setupReminder", { method: "POST", body: email });
+          await fetch("/api/setupReminder", { method: "POST", body: email });
+          alert("Thanks for using the water reminder. We'll start reminding you in 30 minutes :)")
         }}
       >
         <input
